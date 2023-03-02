@@ -6,15 +6,10 @@ greenCharacter.style.left = '100px'
 greenCharacter.style.bottom = '100px'
 document.body.append(greenCharacter)
 
-console.log(newImage)
 
 }
 
-newImage(url,left,bottom){
-    let newImage = greenCharacter
-
-
-}
+newImage('url,left,bottom')
 
 
 let pineTree = document.createElement('img')
