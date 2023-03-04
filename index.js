@@ -1,26 +1,51 @@
-let object = ['greenCharacter','pillar','crate','well']
+function newImage(url, left, bottom){
+    
+    let object = document.createElement('img')
+    object.src = url
+    object.style.position = 'fixed'
+    object.style.left = left + 'px'
+    object.style.bottom = bottom + 'px'
+    document.body.append(object)
+    return object
 
-for (let index = 0; index < object.length;index++){
-    const element = object[index];
+
+
+
 }
 
+function newItem(url, left, bottom){
+    let object = newImage(url, left, bottom)
+
+    object.addEventListener('click', function(){
+        object.remove()
+    })
+
+}
+
+newImage('assets/green-character.gif',100, 100)
+newImage('assets/pine-tree.png',450, 200)
+newImage('assets/tree.png',200, 300)
+newImage('assets/pillar.png',350, 100)
+newImage('assets/crate.png',150, 200)
+newImage('assets/well.png',500, 425)
+
+newItem('assets/sword.png',500, 405)
+newItem('assets/sheild.png',165, 185)
+newItem('assets/staff.png',600, 100)
 
 
-function newImage(url,left,bottom) {
 
 
-    let object = document.createElement('img')
-    object.src = 'assets/green-character.gif'
-    object.style.position = 'fixed'
-    object.style.left = '100px'
-    object.style.bottom = '100px'
-    document.body.append(object)
-    
-  }
-    
-  newImage('$assets/tree.png,200,300')
-  newImage('assets/pillar.png,350px,100px')
-  newImage('assets/crate.png,150px,200px')
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
